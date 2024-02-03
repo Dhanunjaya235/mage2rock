@@ -7,25 +7,27 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <!-- <referenceContainer name="header.panel">
-            <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
-                <arguments>
-                    <argument name="css_class" xsi:type="string">header links</argument>
-                </arguments>
-            </block>
-        </referenceContainer>
-        <referenceContainer name="footer">
-            <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" after="footer_links" template="Magento_Store::switch/stores.phtml"/>
-        </referenceContainer>
-        <referenceBlock name="report.bugs" remove="true"/>
-        <move element="copyright" destination="before.body.end"/> -->
-
         <referenceBlock name="logo">
 
         <arguments>
             <argument name="logo_file" xsi:type="string">images/dhanu-theme-logo.svg</argument>
+            <argument name="logo_height" xsi:type="string">300</argument>
         </arguments>
-        
         </referenceBlock>
+
+         <referenceBlock name="top.links">
+            <block class="Magento\Customer\Block\Account\Link" name="my-account-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Profile</argument>
+                    <argument name="sortOrder" xsi:type="number">110</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Customer\Block\Account\RegisterLink" name="register-link" template="Magento_Theme::toplinks/signUp.phtml">
+        </block>
+
+         <block class="Magento\Customer\Block\Account\AuthorizationLink"  name="authorization-link" template="Magento_Theme::toplinks/signIn.phtml">
+         </block>
+        </referenceBlock>         
     </body>
 </page>

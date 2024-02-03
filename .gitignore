@@ -2,3 +2,7 @@
 /dev/
 /vendor/
 /pub/
+/var/
+/var/cache/
+/setup/
+/node_modules/
