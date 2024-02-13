@@ -8,26 +8,35 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="logo">
-
-        <arguments>
-            <argument name="logo_file" xsi:type="string">images/dhanu-theme-logo.svg</argument>
-            <argument name="logo_height" xsi:type="string">300</argument>
-        </arguments>
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/dhanu-theme-logo.svg</argument>
+                <argument name="logo_height" xsi:type="string">300</argument>
+            </arguments>
         </referenceBlock>
 
-         <referenceBlock name="top.links">
-            <block class="Magento\Customer\Block\Account\Link" name="my-account-link">
+        <referenceBlock name="top.links">
+            <block class="Magento\Customer\Block\Account\RegisterLink" name="register-link" template="Magento_Theme::toplinks/signUp.phtml">
+            </block>
+            <block class="Magento\Customer\Block\Account\AuthorizationLink" name="authorization-link" template="Magento_Theme::toplinks/signIn.phtml">
+            </block>
+        </referenceBlock>
+
+        <referenceContainer name="header-wrapper">
+            <block class="Magento\Wishlist\Block\Link" name="wish-list-link" template="Magento_Theme::toplinks/wishlist.phtml">
                 <arguments>
-                    <argument name="label" xsi:type="string" translate="true">Profile</argument>
-                    <argument name="sortOrder" xsi:type="number">110</argument>
+                    <argument name="sortOrder" xsi:type="number">1</argument>
                 </arguments>
             </block>
+            <block class="Magento\Customer\Block\Account\Link" name="my-account-link" template="Magento_Theme::toplinks/profile.phtml">
+            </block>
+        </referenceContainer>
 
-            <block class="Magento\Customer\Block\Account\RegisterLink" name="register-link" template="Magento_Theme::toplinks/signUp.phtml">
-        </block>
+        <!-- <referenceBlock name="wish-list-link" remove="true">
+           
+        </referenceBlock> -->
 
-         <block class="Magento\Customer\Block\Account\AuthorizationLink"  name="authorization-link" template="Magento_Theme::toplinks/signIn.phtml">
-         </block>
-        </referenceBlock>         
+        <move element="wish-list-link" destination="header-wrapper" after="logo"></move>
+        <move element="my-account-link" destination="header-wrapper" after="logo"></move>
+
     </body>
 </page>

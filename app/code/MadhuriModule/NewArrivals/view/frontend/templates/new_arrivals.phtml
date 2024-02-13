@@ -1,0 +1,16 @@
+<!-- File: app/code/YourVendor/NewArrivals/view/frontend/templates/new_arrivals.phtml -->
+<div class="new-arrivals">
+ 
+    <div class="slider">
+    <?php foreach ($block->getNewArrivals() as $product) : ?>
+      <a href="<?= $product->getProductUrl() ?>">
+        <img src="<?= $block->getProductImageUrl($product) ?>" loading="lazy" alt="<?= $product->getName() ?>" height="300px" />
+      </a>
+      <?php endforeach; ?>
+    </div>
+</div>
+
+<script type="application/javascript" defer>
+  console.log('script tag in new_arrivals');
+     <?php echo file_get_contents($block->getViewFileUrl('MadhuriModule_NewArrivals::js/slider.js')); ?>
+</script>

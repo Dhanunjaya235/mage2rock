@@ -9,6 +9,21 @@
     <head>
         <css src="css/all.min.css" />
         <css src="css/brands.min.css" />
+        <css src="css/solid.min.css" />
+        <css src="css/fontawesome.min.css" />
+
+         <css src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" src_type="url"/>
+        <css src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" src_type="url"/>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" src_type="url"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" src_type="url"/>
+        <!-- <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" src_type="url" />
+        <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" src_type="url" /> -->
+
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"  src_type="url"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"  src_type="url"></script>
+        <!-- <css src="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"  src_type="url" /> -->
+
         <meta http-equiv="Content-Security-Policy" content="..." />
+        <meta http-equiv="Content-Security-Policy" content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;" />
     </head>
 </page>

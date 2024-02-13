@@ -1,0 +1,9 @@
+<!-- app/code/[Vendor]/[Module]/etc/module.xml -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Dhanu_CustomModule" setup_version="1.0.0">
+        <sequence>
+            <!-- If your module depends on other modules, specify them here -->
+            <!-- <module name="[Vendor]_[Dependency]" /> -->
+        </sequence>
+    </module>
+</config>

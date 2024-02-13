@@ -1,0 +1,218 @@
+/*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2022 @codewithsadee 
+ */
+
+
+
+
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+
+
+
+
+
+/*-----------------------------------*\
+    #RESET
+  \*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+    #REUSED STYLE
+  \*-----------------------------------*/
+
+
+
+
+
+
+/*-----------------------------------*\
+    #MAIN
+  \*-----------------------------------*/
+
+/**
+   * overlay 
+   */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: hsla(0, 0%, 0%, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 15;
+  transition: 0.5s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+
+/**
+   * MODAL 
+   */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: hsla(0, 0%, 0%, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 10;
+  animation: popup 1s ease-in-out 5s forwards;
+}
+
+@keyframes popup {
+
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+}
+
+.modal.closed {
+  display: none;
+}
+
+.modal-close-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.newsletter-img {
+  display: none;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 350px;
+  margin: 20px;
+  background: hsl(0, 100%, 100%);
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 2;
+  animation: scaleUp 0.5s ease-in-out 5s forwards;
+}
+
+@keyframes scaleUp {
+
+  0% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: hsl(353, 100%, 78%);
+  color: hsl(0, 100%, 100%);
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.modal-close-btn:hover {
+  opacity: 0.9;
+}
+
+.modal-close-btn ion-icon {
+  --ionicon-stroke-width: 70px;
+}
+
+.newsletter {
+  padding: 50px 30px;
+  text-align: center;
+}
+
+.newsletter-header {
+  margin-bottom: 20px;
+}
+
+.newsletter-title {
+  color: hsl(0, 0%, 27%);
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.newsletter-desc {
+  color: hsl(0, 0%, 47%);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.email-field {
+  font-size: 0.875rem;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: 1px solid hsl(0, 0%, 93%);
+  margin-bottom: 16px;
+}
+
+.btn-newsletter {
+  background: hsl(295, 95%, 52%);
+  color: hsl(0, 100%, 100%);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: auto;
+  transition: 0.2s ease;
+}
+
+.btn-newsletter:hover {
+  background: hsl(353, 100%, 78%);
+}
+
+.modal-content {
+  display: flex;
+  align-items: center;
+  max-width: 750px;
+  width: fit-content;
+}
+
+.newsletter-img { display: block; }
+
+.newsletter { text-align: left; }
