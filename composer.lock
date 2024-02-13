@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb8518d22ec459d770c27ab2b8996437",
+    "content-hash": "4bb5a1a01501166e3ac88cefc022704c",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -380,6 +380,53 @@
             "time": "2021-12-16T21:41:27+00:00"
         },
         {
+            "name": "boltpay/bolt-magento2",
+            "version": "2.27.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BoltApp/bolt-magento2.git",
+                "reference": "90016787c3b2c4a84de43fc8ed7533dfd7c54006"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BoltApp/bolt-magento2/zipball/90016787c3b2c4a84de43fc8ed7533dfd7c54006",
+                "reference": "90016787c3b2c4a84de43fc8ed7533dfd7c54006",
+                "shasum": ""
+            },
+            "require": {
+                "bugsnag/bugsnag": "^3.4",
+                "magento/framework": "100.*|101.*|102.*|103.*",
+                "magento/module-checkout": "100.*|101.*|102.*|103.*",
+                "magento/module-payment": "100.*|101.*|102.*|103.*",
+                "magento/module-sales": "100.*|101.*|102.*|103.*",
+                "magento/module-tax": "100.*|101.*|102.*|103.*"
+            },
+            "require-dev": {
+                "magento/magento-coding-standard": "^5.0",
+                "mikey179/vfsstream": "^1.6",
+                "phpunit/phpunit": "~6.2.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Bolt\\Boltpay\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Bolt payment gateway integration",
+            "support": {
+                "issues": "https://github.com/BoltApp/bolt-magento2/issues",
+                "source": "https://github.com/BoltApp/bolt-magento2/tree/2.27.4"
+            },
+            "time": "2023-11-02T15:56:24+00:00"
+        },
+        {
             "name": "braintree/braintree_php",
             "version": "6.11.1",
             "source": {
@@ -531,6 +578,69 @@
                 }
             ],
             "time": "2023-09-01T21:10:07+00:00"
+        },
+        {
+            "name": "bugsnag/bugsnag",
+            "version": "v3.29.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bugsnag/bugsnag-php.git",
+                "reference": "7fff8512b237a57323f600975ada6376e2b912c1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bugsnag/bugsnag-php/zipball/7fff8512b237a57323f600975ada6376e2b912c1",
+                "reference": "7fff8512b237a57323f600975ada6376e2b912c1",
+                "shasum": ""
+            },
+            "require": {
+                "composer/ca-bundle": "^1.0",
+                "guzzlehttp/guzzle": "^5.0|^6.0|^7.0",
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "guzzlehttp/psr7": "^1.3",
+                "mtdowling/burgomaster": "dev-master#72151eddf5f0cf101502b94bf5031f9c53501a04",
+                "php-mock/php-mock-phpunit": "^1.1|^2.1",
+                "phpunit/phpunit": "^4.8.36|^7.5.15|^9.3.10",
+                "sebastian/version": ">=1.0.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.20-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bugsnag\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Smith",
+                    "email": "notifiers@bugsnag.com",
+                    "homepage": "https://bugsnag.com"
+                }
+            ],
+            "description": "Official Bugsnag notifier for PHP applications.",
+            "homepage": "https://github.com/bugsnag/bugsnag-php",
+            "keywords": [
+                "bugsnag",
+                "errors",
+                "exceptions",
+                "logging",
+                "tracking"
+            ],
+            "support": {
+                "issues": "https://github.com/bugsnag/bugsnag-php/issues",
+                "source": "https://github.com/bugsnag/bugsnag-php/tree/v3.29.1"
+            },
+            "time": "2023-05-10T11:07:22+00:00"
         },
         {
             "name": "christian-riesen/base32",
