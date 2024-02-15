@@ -9,10 +9,28 @@ return [
         ],
         'frontend' => [
             'default' => [
-                'id_prefix' => '5f9_'
+                'id_prefix' => '5f9_',
+                'backend' => 'Magento\\Framework\\Cache\\Backend\\Redis',
+                'backend_options' => [
+                    'server' => '127.0.0.1',
+                    'database' => '0',
+                    'port' => '6379',
+                    'password' => '',
+                    'compress_data' => '1',
+                    'compression_lib' => ''
+                ]
             ],
             'page_cache' => [
-                'id_prefix' => '5f9_'
+                'id_prefix' => '5f9_',
+                'backend' => 'Magento\\Framework\\Cache\\Backend\\Redis',
+                'backend_options' => [
+                    'server' => '127.0.0.1',
+                    'database' => '=1',
+                    'port' => '6379',
+                    'password' => '',
+                    'compress_data' => '0',
+                    'compression_lib' => ''
+                ]
             ]
         ],
         'allow_parallel_generation' => false
